@@ -1,0 +1,142 @@
+.main-nav {
+  position: relative;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+    margin: 0 auto;
+    min-height: 80px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 1440px;
+  }
+}
+
+.main-nav__wrapper {
+  display: flex;
+  align-items: center;
+  padding: 0 0 0 20px;
+  margin: 0 auto;
+
+  @media (min-width: @tablet-width) {
+    display: contents;
+  }
+}
+
+.main-nav__logo {
+  padding-top: 5px;
+
+  @media (min-width: @tablet-width) {
+    padding: 5px 0 0 20px;
+    order: 0;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-right: 20px;
+    padding-left: 40px;
+  }
+}
+
+.main-nav__logo-text {
+  display: none;
+  font-size: 12px;
+  line-height: 16px;
+
+  @media (min-width: @desktop-width) {
+    display: block;
+    width: 148px;
+    margin-top: 24px;
+    font-size: 12px;
+    line-height: 16px;
+    font-weight: 400;
+  }
+}
+
+.main-nav__toggle {
+  position: relative;
+  top: 0;
+  display: block;
+  width: 60px;
+  height: 60px;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+
+  &:active {
+    background-color: @base-secondary;
+  }
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+}
+
+.main-nav__burger {
+  fill: @base-black;
+  width: 16px;
+  height: 16px;
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+}
+
+.main-nav--opened .main-nav__burger {
+  display: none;
+}
+
+.main-nav--opened .main-nav__toggle {
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 30px;
+    right: 22px;
+    width: 16px;
+    height: 1px;
+    background-color: @base-black;
+  }
+
+  &::before {
+    transform: rotate(45deg);
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
+}
+
+.main-nav--opened .main-nav__list-link {
+  @media (max-width: @mobile-width) {
+    display: flex;
+    position: absolute;
+    z-index: 2;
+  }
+}
+
+
+.main-nav--nojs .main-nav__toggle {
+  display: none;
+}
+
+.main-nav--nojs .main-nav {
+  position: static;
+  min-height: 0;
+}
+
+.main-nav--nojs .main-nav-list {
+  display: block;
+  position: static;
+}
+
+.main-nav--closed .site-list__item {
+  @media (max-width: @mobile-width) {
+    display: none;
+  }
+}

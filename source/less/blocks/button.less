@@ -1,0 +1,32 @@
+.button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  color: @base-white;
+  background-color: @base-primary;
+  padding: 12px 12px;
+  border-radius: 4px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  cursor: pointer;
+  border: none;
+
+  &:hover,
+  &:focus {
+    background-color: @primary-lighter;
+    transition: 0.3ms;
+  }
+
+  &:active {
+    background-color: @primary-darker;
+    transition: 0.3ms;
+  }
+
+  &:disabled {
+    background: @base-grey;
+    transition: 0.3ms;
+  }
+}

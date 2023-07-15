@@ -1,0 +1,46 @@
+.noUi-target {
+  height: 4px;
+  background-color: @light-grey;
+}
+
+.noUi-connect {
+  background-color: @primary-lighter;
+}
+
+.noUi-horizontal .noUi-handle {
+  display: flex;
+  width: 24px;
+  height: 24px;
+  right: -22px;
+  top: calc(50% - 24px/2 + 2px);
+  background-color: @base-white;
+  border: 2px solid @primary-lighter;
+  border-radius: 50%;
+  cursor: pointer;
+
+  &::before,
+  &::after {
+    display: none;
+  }
+}
+
+.noUi-handle:hover .noUi-touch-area,
+.noUi-handle:focus .noUi-touch-area {
+  background-color: @primary-opacity;
+  border-radius: 50%;
+  margin: 0 auto;
+  padding-top: 10px;
+  align-self: center;
+  height: 70%;
+  width: 70%;
+}
+
+.noUi-handle:active .noUi-touch-area {
+  background-color: @base-primary;
+  border-radius: 50%;
+  margin: 0 auto;
+  padding-top: 10px;
+  align-self: center;
+  height: 70%;
+  width: 70%;
+}

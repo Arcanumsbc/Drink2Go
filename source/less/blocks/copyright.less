@@ -1,0 +1,35 @@
+.copyright {
+  display: flex;
+}
+
+.copyright__logo-link {
+  display: flex;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  color: @base-grey;
+
+  &:hover,
+  &:focus {
+    color: @base-primary;
+  }
+
+  &:active {
+    color: @primary-darker;
+  }
+}
+
+.copyright__htmlacademy {
+  width: 14px;
+  height: 16px;
+  fill: @base-grey;
+}
+
+.copyright__logo-link:focus .copyright__htmlacademy,
+.copyright__logo-link:hover .copyright__htmlacademy {
+  fill: @base-primary;
+}
+
+.copyright__logo-link:active .copyright__htmlacademy {
+  fill: @primary-darker;
+}

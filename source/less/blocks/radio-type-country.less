@@ -1,0 +1,124 @@
+.radio-type-country {
+  border: none;
+  margin: 10px 0 0;
+  padding: 0;
+
+  @media (min-width: @tablet-width) {
+    margin: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 10px;
+  }
+}
+
+.radio-type-country__label-legend {
+  color: @base-black;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+
+  @media (min-width: @tablet-width) {
+    padding: 0 20px 20px 0;
+  }
+}
+
+.radio-type-country___list {
+  padding: 0 0 9px 0;
+  margin: 20px 0 0 0;
+}
+
+.radio-type-country___item {
+  margin-bottom: 20px;
+  list-style: none;
+}
+
+.radio-type-country__label {
+  position: relative;
+}
+
+.radio-type-country__text {
+  position: relative;
+  color: @base-black;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  cursor: pointer;
+  user-select: none;
+  margin: 5px 30px;
+}
+
+.radio-type-country__input {
+  position: relative;
+  border: none;
+  padding: 0;
+}
+
+.radio-type-country__mark {
+  content: "";
+  position: absolute;
+  top: -4px;
+  left: -2px;
+  width: 42px;
+  height: 28px;
+  margin: 0;
+  background-image: url("../../img/toggle-off.svg");
+  background-repeat: no-repeat;
+  transition: 0.3s;
+}
+
+.radio-type-country__input[type="checkbox"]:focus-visible + .radio-type-country__mark::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 42px;
+  height: 28px;
+  margin: 0;
+  background-image: url("../../img/toggle-hover.svg");
+  background-repeat: no-repeat;
+  transition: 0.3s;
+}
+
+.radio-type-country__input[type="checkbox"]:checked + .radio-type-country__mark::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 42px;
+  height: 28px;
+  margin: 0;
+  background-image: url("../../img/toggle-on.svg");
+  background-repeat: no-repeat;
+  transition: 0.3s;
+}
+
+.radio-type-country__input[type="checkbox"]:hover + .radio-type-country__mark::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 42px;
+  height: 28px;
+  margin: 0;
+  background-image: url("../../img/toggle-hover.svg");
+  background-repeat: no-repeat;
+  transition: 0.3s;
+}
+
+.radio-type-country__input[type="checkbox"]:disabled + .radio-type-country__mark::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 42px;
+  height: 28px;
+  margin: 0;
+  background-image: url("../../img/toggle-disabled.svg");
+  background-repeat: no-repeat;
+  transition: 0.3s;
+}
+
+.radio-type-country__input[type="checkbox"]:disabled + .radio-type-country__mark + .radio-type-country__text {
+  color: @base-grey;
+}

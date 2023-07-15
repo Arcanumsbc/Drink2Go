@@ -1,0 +1,197 @@
+.filter__range:disabled .noUi-handle {
+  border: 2px solid @base-grey;
+}
+
+.filter-wrapper {
+  padding-left: 3px;
+  margin-bottom: 38px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 42px;
+    padding-left: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 2px;
+    padding: 0 0 0 40px;
+  }
+}
+
+.filter {
+  padding-top: 20px;
+
+  @media (min-width: @tablet-width) {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 30px;
+    padding: 22px 20px 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: block;
+    padding: 0;
+  }
+}
+
+.filter__price {
+  display: flex;
+  flex-direction: column;
+  border: none;
+  padding: 0 0 20px;
+  margin: 0;
+
+  @media (min-width: @tablet-width) {
+    padding: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 28px;
+  }
+}
+
+.filter__range {
+  margin-bottom: 36px;
+
+  @media (min-width: @tablet-width) {
+    margin: 0 0 30px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 0 0 30px;
+  }
+}
+
+.filter__price-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @media (min-width: @desktop-width) {
+    padding: 0;
+  }
+}
+
+.filter__price-controls-label {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  padding: 0;
+  margin-bottom: 28px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 29px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 31px;
+  }
+}
+
+.filter__price-controls-input {
+  appearance: textfield;
+  width: 100%;
+  padding: 6px 8px;
+  background-color: @base-white;
+  border: 2px solid @base-primary;
+  border-radius: 4px;
+
+  &:focus {
+    outline: none;
+    border-color: @primary-darker;
+  }
+
+  @media (min-width: @tablet-width) {
+    width: 67px;
+    padding: 6px 8px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 100px;
+    padding: 8px 15px;
+  }
+}
+
+.filter__price-controls-input[type="number"]::-webkit-inner-spin-button,
+.filter__price-controls-input[type="number"]::-webkit-outer-spin-button {
+  appearance: none;
+  margin: 0;
+}
+
+.filter__inputs-dash {
+  background-color: @base-grey;
+  display: block;
+  width: 8px;
+  height: 2px;
+  margin: 0 20px;
+}
+
+.filter__btn,
+.filter__btn-white {
+  width: 280px;
+  margin: 0 auto;
+
+  @media (min-width: @tablet-width) {
+    padding: 8px 3px;
+    margin: 0;
+    font-size: 14px;
+    line-height: 24px;
+  }
+}
+
+.filter__btn {
+  padding: 8px 8px;
+  margin-bottom: 20px;
+  letter-spacing: 0.1em;
+
+  @media (min-width: @tablet-width) {
+    margin: 0;
+    width: 138px;
+    font-size: 16px;
+    letter-spacing: 0.1em;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 149px;
+  }
+}
+
+.filter__btn-white {
+  background-color: @base-white;
+  color: @base-primary;
+  font-weight: 400;
+  letter-spacing: 0.1em;
+  padding: 8px 8px;
+
+  @media (min-width: @tablet-width) {
+    width: 120px;
+    padding-left: 5px;
+    padding-right: 5px;
+    font-size: 16px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 149px;
+  }
+
+  &:hover,
+  &:focus {
+    color: @base-white;
+  }
+}
+
+.filter__btn-wrapper {
+  @media (min-width: @tablet-width) {
+    grid-area: 2 / 1 / 4 / 4;
+    display: flex;
+    align-items: center;
+    width: 277px;
+    justify-content: space-between;
+    padding-top: 10px;
+    margin: 0 auto;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 0;
+    width: 318px;
+  }
+}
